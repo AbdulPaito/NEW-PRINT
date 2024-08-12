@@ -459,7 +459,7 @@ left: -45px;
         </div>
         <div class="input-container">
             <input type="text" value="<?php echo htmlspecialchars($data['email_facebook']); ?>" size="20" placeholder="Email Address/Facebook Account">
-            <label>Email Address/Facebook Account</label>
+            <label>Email Address/Facebook Acc</label>
         </div>
         <div class="input-container">
             <input type="text" value="<?php echo htmlspecialchars($data['contact_no']); ?>" size="20" placeholder="Contact No">
