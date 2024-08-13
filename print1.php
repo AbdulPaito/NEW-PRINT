@@ -356,13 +356,9 @@ left: -45px;
            width: 250px;
           }
     </style>
-    <script>
-        function printPage() {
-            window.print();
-        }
-    </script>
+    
 </head>
-<body>
+<body onload="window.print()">
     <div class="page">
     <table class="one">
             <tr>
@@ -763,10 +759,6 @@ left: -45px;
   </table>
 
         </table>
-
-        <div class="center">
-            <button onclick="printPage()">Print</button>
-        </div>
 </body>
 </html>
 
