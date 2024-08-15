@@ -54,6 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reset Password</title>
   <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     .error-message {
       color: red;
@@ -88,8 +90,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       margin-top: -10px;
     }
 
-
-
+    .eye-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #aaa; /* Icon color */
+      font-size: 20px; /* Adjust size */
+    }
+    .eye-icon.active {
+      color: #000; /* Icon color when active */
+    }
 
   </style>
 </head>
@@ -105,18 +117,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <div class="success-message"><?php echo htmlspecialchars($success_message); ?></div>
         <?php endif; ?>
         <form class="form" action="reset_password.php" method="POST">
-          <div class="inputBox">
-            <input type="password" name="current_password" required>
-            <label>Current Password</label>
+
+        <div class="inputBox">
+            <input type="password" id="current_password" name="current_password" required>
+            <label for="current_password">Current Password</label>
+            <i class="fa fa-eye eye-icon" id="toggleCurrentPassword" onclick="togglePassword('current_password', 'toggleCurrentPassword')"></i>
           </div>
+
           <div class="inputBox">
-            <input type="password" name="new_password" required>
-            <label>New Password</label>
+            <input type="password" id="new_password" name="new_password" required>
+            <label for="new_password">New Password</label>
+            <i class="fa fa-eye eye-icon" id="toggleNewPassword" onclick="togglePassword('new_password', 'toggleNewPassword')"></i>
           </div>
+
           <div class="inputBox">
-            <input type="password" name="confirm_password" required>
-            <label>Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <label for="confirm_password">Confirm Password</label>
+            <i class="fa fa-eye eye-icon" id="toggleConfirmPassword" onclick="togglePassword('confirm_password', 'toggleConfirmPassword')"></i>
           </div>
+
+
           <div class="inputBox1">
             <input type="submit" value="Reset Password">
           </div>
@@ -124,5 +144,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
     </div>
   </section>
+
+  <script>
+    function togglePassword(fieldId, iconId) {
+      var passwordField = document.getElementById(fieldId);
+      var eyeIcon = document.getElementById(iconId);
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.classList.add('active');
+      } else {
+        passwordField.type = 'password';
+        eyeIcon.classList.remove('active');
+      }
+    }
+  </script>
+
 </body>
 </html>
