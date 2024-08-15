@@ -1,0 +1,100 @@
+<?php
+session_start();
+include 'database.php'; // Include your database connection file
+
+$error_message = '';
+$success_message = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['username']) && isset($_POST['email'])) {
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+
+        $stmt = $conn->prepare("SELECT id FROM users WHERE username = ? AND email = ?");
+        if ($stmt === false) {
+            die("Prepare failed: " . $conn->error);
+        }
+        $stmt->bind_param("ss", $username, $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $_SESSION['username'] = $username;
+            header("Location: reset_password.php"); // Redirect to password reset page
+            exit();
+        } else {
+            $error_message = "Invalid username or email.";
+        }
+    } else {
+        $error_message = "Username and email are required.";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="log.css">
+  <style>
+    .error-message {
+      color: red;
+      font-weight: bold;
+    }
+    .inputBox {
+      text-align: center;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+    .inputBox input {
+      padding: 10px;
+      width: 60%;
+      border-radius: 20px;
+    }
+
+
+    .inputBox1 input{
+      padding: 10px;
+      width: 60%;
+      text-align: center;
+      border-radius: 20px;
+      
+    }
+    .inputBox1 {
+      text-align: center;
+      border-radius: 20px;
+      margin-top: -10px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <section>
+    <div class="signin">
+      <div class="content">
+        <h2>Forgot Password</h2>
+        <?php if (!empty($error_message)): ?>
+          <div class="error-message"><?php echo htmlspecialchars($error_message); ?></div>
+        <?php endif; ?>
+        <form class="form" action="forgot_password.php" method="POST">
+          <div class="inputBox">
+            <input type="text" name="username" required>
+            <label>Username</label>
+          </div>
+          <div class="inputBox">
+            <input type="email" name="email" required>
+            <label>Email</label>
+          </div>
+          <div class="inputBox1">
+            <input type="submit" value="Request Password Reset">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
