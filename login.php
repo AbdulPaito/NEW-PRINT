@@ -63,6 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     .error-message {
       color: red;
@@ -80,9 +82,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     .inputBox1 {
       text-align: center;
       border-radius: 20px;
-      margin-top: -10px;
+      margin-top: -15px;
     }
 
+
+    .eye-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #aaa; /* Icon color */
+      font-size: 20px; /* Adjust size */
+    }
+
+    .eye-icon.active {
+      color: #000; /* Icon color when active */
+    }
+
+
+
+    .forgot-password {
+      margin-top: -10px;
+      text-align: right;
+      padding: auto;
+    }
+
+    .forgot-password p {
+      margin: 0;
+    }
+
+    .forgot-password a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -98,13 +135,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" name="username" required>
             <label>Username</label>
           </div>
+
           <div class="inputBox">
-            <input type="password" name="password" required>
-            <label>Password</label>
+            <input type="password" id="password" name="password" required>
+            <label for="password">Password</label>
+            <i class="fa fa-eye eye-icon" id="togglePassword" onclick="togglePassword()"></i>
           </div>
+ 
+          <div class="forgot-password">
+          <p><a href="forgot_password.php">Forgot Password?</a></p>
+         </div>
+
           <div class="inputBox1">
             <input type="submit" value="Login">
           </div>
+
+
         </form>
         <div class="signup">
           <p>Don't have an account? <a href="signup.php" class="sign-up-link" onclick="openSignUpModal()">Sign up</a></p>
@@ -147,5 +193,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       document.getElementById('signupModal').style.display = 'none';
     }
   </script>
+
+<script>
+  function togglePassword() {
+      var passwordField = document.getElementById('password');
+      var eyeIcon = document.getElementById('togglePassword');
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.classList.add('active');
+      } else {
+        passwordField.type = 'password';
+        eyeIcon.classList.remove('active');
+      }
+    }
+</script>
+
 </body>
 </html>
