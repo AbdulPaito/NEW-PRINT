@@ -750,10 +750,24 @@ left: -45px;
           <label for="thumbmark" class="thumbmark-label">Right Thumbmark</label>
          
         </div>
+        
+
         <div class="image-box1" id="imageBox">
-          <label for="imageUpload" class="file-upload-label">Picture</label>
-          <img src="<?php echo htmlspecialchars($data['imageUpload']); ?>" alt="Profile Picture">
-        </div>
+    <label for="imageUpload" class="file-upload-label">Picture</label>
+    <?php if (!empty($data['imageUpload'])): ?>
+        <?php if (is_string($data['imageUpload'])): ?>
+            <img src="<?php echo htmlspecialchars($data['imageUpload']); ?>" alt="Profile Picture">
+        <?php else: ?>
+            <img src="data:image/jpeg;base64,<?php echo base64_encode($data['imageUpload']); ?>" alt="Profile Picture">
+        <?php endif; ?>
+    <?php endif; ?>
+    </div>
+</td>
+
+
+
+
+
       </td>
     </tr>
   </table>
