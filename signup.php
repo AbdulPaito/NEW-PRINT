@@ -70,10 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
   <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     .error-container {
       color: red;
-     
       font-weight: bold;
       position: relative;
      
@@ -94,6 +95,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       margin-top: -10px;
     }
 
+    .eye-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #aaa; /* Icon color */
+      font-size: 20px; /* Adjust size */
+    }
+
+    .eye-icon.active {
+      color: #000; /* Icon color when active */
+    }
   </style>
 </head>
 <body>
@@ -109,10 +123,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" name="username" required>
             <label>Username</label>
           </div>
+
           <div class="inputBox">
-            <input type="password" name="password" required>
-            <label>Password</label>
+            <input type="password" id="password" name="password" required>
+            <label for="password">Password</label>
+            <i class="fa fa-eye eye-icon" id="togglePassword" onclick="togglePassword()"></i>
           </div>
+
           <div class="inputBox">
             <input type="email" name="email" required>
             <label>Email</label>
@@ -124,5 +141,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
     </div>
   </section>
+
+  <script>
+  function togglePassword() {
+      var passwordField = document.getElementById('password');
+      var eyeIcon = document.getElementById('togglePassword');
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.classList.add('active');
+      } else {
+        passwordField.type = 'password';
+        eyeIcon.classList.remove('active');
+      }
+    }
+</script>
 </body>
 </html>
