@@ -261,125 +261,126 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <br>
             <br>
             <label for="uli_number">ULI Number:</label>
-            <input type="text" name="uli_number" value="<?php echo htmlspecialchars($user['uli_number']); ?>" required>
+            <input type="text" name="uli_number" value="<?php echo htmlspecialchars($user['uli_number']); ?>">
             <br>
             <label for="entry_date">Entry Date:</label>
-            <input type="date" name="entry_date" value="<?php echo htmlspecialchars($user['entry_date']); ?>" required>
+            <input type="date" name="entry_date" value="<?php echo htmlspecialchars($user['entry_date']); ?>">
             <br>
             <label for="last_name">Last Name:</label>
-            <input type="text" name="last_name" value="<?php echo htmlspecialchars($user['last_name']); ?>" required>
+            <input type="text" name="last_name" value="<?php echo htmlspecialchars($user['last_name']); ?>">
             <br>
             <label for="first_name">First Name:</label>
-            <input type="text" name="first_name" value="<?php echo htmlspecialchars($user['first_name']); ?>" required>
+            <input type="text" name="first_name" value="<?php echo htmlspecialchars($user['first_name']); ?>">
             <br>
             <label for="middle_name">Middle Name:</label>
-            <input type="text" name="middle_name" value="<?php echo htmlspecialchars($user['middle_name']); ?>" required>
+            <input type="text" name="middle_name" value="<?php echo htmlspecialchars($user['middle_name']); ?>">
             <br>
             <label for="address_number_street">Address (Number/Street):</label>
-            <input type="text" name="address_number_street" value="<?php echo htmlspecialchars($user['address_number_street']); ?>" required>
+            <input type="text" name="address_number_street" value="<?php echo htmlspecialchars($user['address_number_street']); ?>">
             <br>
             <label for="address_barangay">Address (Barangay):</label>
-            <input type="text" name="address_barangay" value="<?php echo htmlspecialchars($user['address_barangay']); ?>" required>
+            <input type="text" name="address_barangay" value="<?php echo htmlspecialchars($user['address_barangay']); ?>">
             <br>
             <label for="address_district">Address (District):</label>
-            <input type="text" name="address_district" value="<?php echo htmlspecialchars($user['address_district']); ?>" required>
+            <input type="text" name="address_district" value="<?php echo htmlspecialchars($user['address_district']); ?>">
             <br>
             <label for="address_city_municipality">Address (City/Municipality):</label>
-            <input type="text" name="address_city_municipality" value="<?php echo htmlspecialchars($user['address_city_municipality']); ?>" required>
+            <input type="text" name="address_city_municipality" value="<?php echo htmlspecialchars($user['address_city_municipality']); ?>">
             <br>
             <label for="address_province">Address (Province):</label>
-            <input type="text" name="address_province" value="<?php echo htmlspecialchars($user['address_province']); ?>" required>
+            <input type="text" name="address_province" value="<?php echo htmlspecialchars($user['address_province']); ?>">
             <br>
             <label for="address_region">Address (Region):</label>
-            <input type="text" name="address_region" value="<?php echo htmlspecialchars($user['address_region']); ?>" required>
+            <input type="text" name="address_region" value="<?php echo htmlspecialchars($user['address_region']); ?>">
             <br>
             <label for="email_facebook">Email/Facebook:</label>
-            <input type="text" name="email_facebook" value="<?php echo htmlspecialchars($user['email_facebook']); ?>" required>
+            <input type="text" name="email_facebook" value="<?php echo htmlspecialchars($user['email_facebook']); ?>">
             <br>
             <label for="contact_no">Contact Number:</label>
-            <input type="text" name="contact_no" value="<?php echo htmlspecialchars($user['contact_no']); ?>" required>
+            <input type="text" name="contact_no" value="<?php echo htmlspecialchars($user['contact_no']); ?>">
             <br>
             <label for="nationality">Nationality:</label>
-            <input type="text" name="nationality" value="<?php echo htmlspecialchars($user['nationality']); ?>" required>
+            <input type="text" name="nationality" value="<?php echo htmlspecialchars($user['nationality']); ?>">
             <br>
             <label for="sex">Sex:</label>
-            <input type="text" name="sex" value="<?php echo htmlspecialchars($user['sex']); ?>" required>
+            <input type="text" name="sex" value="<?php echo htmlspecialchars($user['sex']); ?>">
             <br>
             <label for="civil_status">Civil Status:</label>
-            <input type="text" name="civil_status" value="<?php echo htmlspecialchars($user['civil_status']); ?>" required>
+            <input type="text" name="civil_status" value="<?php echo htmlspecialchars($user['civil_status']); ?>">
             <br>
             <label for="employment_status">Employment Status:</label>
-            <input type="text" name="employment_status" value="<?php echo htmlspecialchars($user['employment_status']); ?>" required>
+            <input type="text" name="employment_status" value="<?php echo htmlspecialchars($user['employment_status']); ?>">
             <br>
             <label for="month_of_birth">Month of Birth:</label>
-            <input type="text" name="month_of_birth" value="<?php echo htmlspecialchars($user['month_of_birth']); ?>" required>
+            <input type="text" name="month_of_birth" value="<?php echo htmlspecialchars($user['month_of_birth']); ?>">
             <br>
             <label for="day_of_birth">Day of Birth:</label>
-            <input type="text" name="day_of_birth" value="<?php echo htmlspecialchars($user['day_of_birth']); ?>" required>
+            <input type="text" name="day_of_birth" value="<?php echo htmlspecialchars($user['day_of_birth']); ?>">
             <br>
             <label for="year_of_birth">Year of Birth:</label>
-            <input type="text" name="year_of_birth" value="<?php echo htmlspecialchars($user['year_of_birth']); ?>" required>
+            <input type="text" name="year_of_birth" value="<?php echo htmlspecialchars($user['year_of_birth']); ?>">
             <br>
             <label for="age">Age:</label>
-            <input type="text" name="age" value="<?php echo htmlspecialchars($user['age']); ?>" required>
+            <input type="text" name="age" value="<?php echo htmlspecialchars($user['age']); ?>">
             <br>
             <label for="birthplace_city_municipality">Birthplace (City/Municipality):</label>
-            <input type="text" name="birthplace_city_municipality" value="<?php echo htmlspecialchars($user['birthplace_city_municipality']); ?>" required>
+            <input type="text" name="birthplace_city_municipality" value="<?php echo htmlspecialchars($user['birthplace_city_municipality']); ?>">
             <br>
             <label for="birthplace_province">Birthplace (Province):</label>
-            <input type="text" name="birthplace_province" value="<?php echo htmlspecialchars($user['birthplace_province']); ?>" required>
+            <input type="text" name="birthplace_province" value="<?php echo htmlspecialchars($user['birthplace_province']); ?>">
             <br>
             <label for="birthplace_region">Birthplace (Region):</label>
-            <input type="text" name="birthplace_region" value="<?php echo htmlspecialchars($user['birthplace_region']); ?>" required>
+            <input type="text" name="birthplace_region" value="<?php echo htmlspecialchars($user['birthplace_region']); ?>">
             <br>
             <label for="educational_attainment">Educational Attainment:</label>
-            <input type="text" name="educational_attainment" value="<?php echo htmlspecialchars($user['educational_attainment']); ?>" required>
+            <input type="text" name="educational_attainment" value="<?php echo htmlspecialchars($user['educational_attainment']); ?>">
             <br>
             <label for="parent_guardian_name">Parent/Guardian Name:</label>
-            <input type="text" name="parent_guardian_name" value="<?php echo htmlspecialchars($user['parent_guardian_name']); ?>" required>
+            <input type="text" name="parent_guardian_name" value="<?php echo htmlspecialchars($user['parent_guardian_name']); ?>">
             <br>
             <label for="parent_guardian_address">Parent/Guardian Address:</label>
-            <input type="text" name="parent_guardian_address" value="<?php echo htmlspecialchars($user['parent_guardian_address']); ?>" required>
+            <input type="text" name="parent_guardian_address" value="<?php echo htmlspecialchars($user['parent_guardian_address']); ?>">
             <br>
             <label for="classification">Classification:</label>
-            <input type="text" name="classification" value="<?php echo htmlspecialchars($user['classification']); ?>" required>
+            <input type="text" name="classification" value="<?php echo htmlspecialchars($user['classification']); ?>">
             <br>
             <label for="disability">Disability:</label>
-            <input type="text" name="disability" value="<?php echo htmlspecialchars($user['disability']); ?>" required>
+            <input type="text" name="disability" value="<?php echo htmlspecialchars($user['disability']); ?>">
             <br>
             <label for="cause_of_disability">Cause of Disability:</label>
-            <input type="text" name="cause_of_disability" value="<?php echo htmlspecialchars($user['cause_of_disability']); ?>" required>
+            <input type="text" name="cause_of_disability" value="<?php echo htmlspecialchars($user['cause_of_disability']); ?>">
             <br>
             <label for="taken_ncae">Taken NCAE:</label>
-            <input type="text" name="taken_ncae" value="<?php echo htmlspecialchars($user['taken_ncae']); ?>" required>
+            <input type="text" name="taken_ncae" value="<?php echo htmlspecialchars($user['taken_ncae']); ?>">
             <br>
             <label for="where_ncae">Where NCAE:</label>
-            <input type="text" name="where_ncae" value="<?php echo htmlspecialchars($user['where_ncae']); ?>" required>
+            <input type="text" name="where_ncae" value="<?php echo htmlspecialchars($user['where_ncae']); ?>">
             <br>
             <label for="when_ncae">When NCAE:</label>
-            <input type="text" name="when_ncae" value="<?php echo htmlspecialchars($user['when_ncae']); ?>" required>
+            <input type="text" name="when_ncae" value="<?php echo htmlspecialchars($user['when_ncae']); ?>">
             <br>
             <label for="qualification">Qualification:</label>
-            <input type="text" name="qualification" value="<?php echo htmlspecialchars($user['qualification']); ?>" required>
+            <input type="text" name="qualification" value="<?php echo htmlspecialchars($user['qualification']); ?>">
             <br>
             <label for="scholarship">Scholarship:</label>
-            <input type="text" name="scholarship" value="<?php echo htmlspecialchars($user['scholarship']); ?>" required>
+            <input type="text" name="scholarship" value="<?php echo htmlspecialchars($user['scholarship']); ?>">
             <br>
             <label for="privacy_disclaimer">Privacy Disclaimer:</label>
-            <input type="text" name="privacy_disclaimer" value="<?php echo htmlspecialchars($user['privacy_disclaimer']); ?>" required>
+            <input type="text" name="privacy_disclaimer" value="<?php echo htmlspecialchars($user['privacy_disclaimer']); ?>">
             <br>
             <label for="applicant_signature">Applicant Signature:</label>
-            <input type="text" name="applicant_signature" value="<?php echo htmlspecialchars($user['applicant_signature']); ?>" required>
+            <input type="text" name="applicant_signature" value="<?php echo htmlspecialchars($user['applicant_signature']); ?>">
             <br>
             <label for="date_accomplished">Date Accomplished:</label>
-            <input type="text" name="date_accomplished" value="<?php echo htmlspecialchars($user['date_accomplished']); ?>" required>
+            <input type="text" name="date_accomplished" value="<?php echo htmlspecialchars($user['date_accomplished']); ?>">
             <br>
             <label for="registrar_signature">Registrar Signature:</label>
-            <input type="text" name="registrar_signature" value="<?php echo htmlspecialchars($user['registrar_signature']); ?>" required>
+            <input type="text" name="registrar_signature" value="<?php echo htmlspecialchars($user['registrar_signature']); ?>">
             <br>
             <label for="date_received">Date Received:</label>
-            <input type="text" name="date_received" value="<?php echo htmlspecialchars($user['date_received']); ?>" required>
+            <input type="text" name="date_received" value="<?php echo htmlspecialchars($user['date_received']); ?>">
             <br>
+
             
             <label for="imageUpload">Picture:</label>
             <div class="image-container">
