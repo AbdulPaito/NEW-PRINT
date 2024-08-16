@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Update failed: " . mysqli_error($connection));
     } else {
         echo "Record updated successfully!";
-        header('Location: Dashboard.php');
+        header('Location: Dashboard.php?page=profile');
         exit;
     }
 }
