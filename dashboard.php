@@ -16,6 +16,7 @@ if (!isset($_SESSION['admin_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
     function confirmLogout() {
         if (confirm("Are you sure you want to logout?")) {
@@ -28,19 +29,20 @@ if (!isset($_SESSION['admin_id'])) {
     <div class="dashboard-container">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="sidebar-header">
-                <h2>Dashboard</h2>
-            </div>
-            <ul class="sidebar-menu">
-                <li><a href="dashboard.php?page=home">Home</a></li>
-                <li><a href="dashboard.php?page=profile">Profile</a></li>
-                <li><a href="dashboard.php?page=reports">Reports</a></li>
-                <li><a href="dashboard.php?page=settings">Settings</a></li>
-                <li><a href="dashboard.php?page=registration">Registration</a></li>
-                <li><a href="dashboard.php?page=admin">Admin</a></li> 
-                <li><a href="#" onclick="confirmLogout()">Logout</a></li>
-            </ul>
-        </aside>
+    <div class="sidebar-header">
+    <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="dashboard.php?page=home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="dashboard.php?page=profile"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="dashboard.php?page=reports"><i class="fas fa-chart-line"></i> Reports</a></li>
+        <li><a href="dashboard.php?page=settings"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="dashboard.php?page=registration"><i class="fas fa-clipboard-list"></i> Registration</a></li>
+        <li><a href="dashboard.php?page=admin"><i class="fas fa-user-shield"></i> Admin</a></li>
+        <li><a href="#" onclick="confirmLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+</aside>
+
 
         <!-- Main Content -->
         <main class="main-content">
